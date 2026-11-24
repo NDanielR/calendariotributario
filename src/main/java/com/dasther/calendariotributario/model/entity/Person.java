@@ -1,6 +1,7 @@
 package com.dasther.calendariotributario.model.entity;
 
 import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,4 +26,16 @@ public class Person {
     @NotBlank
     @Column(nullable = false)
     private String name;
+
+    private String userNameDian;
+
+    @JsonIgnore
+    @Column(columnDefinition = "text")
+    private String passwordDian;
+
+    private String userNameTownHall;
+
+    @JsonIgnore
+    @Column(columnDefinition = "text")
+    private String passwordTownHall;
 }
