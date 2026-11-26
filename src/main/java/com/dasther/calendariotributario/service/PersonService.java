@@ -11,11 +11,17 @@ public interface PersonService {
 
     //listar usuarios
     List<PersonResponseDto> getAll();
+
+    //buscar persona
+    PersonResponseDto getById(long id);
     
     //crear usuario
     PersonResponseDto create(PersonCreateDto dto);
 
     //actualizar usuario
     PersonResponseDto update(PersonUpdateDto dto);
+
+    //eliminar Persona
+    void delete(Long id);
 
 }
